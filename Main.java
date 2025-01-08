@@ -9,6 +9,6 @@ public class Main {
         vetor.adiciona("12");
 
         System.out.println(vetor.tamanho());
-        System.out.println(vetor);
+        System.out.println(vetor.busca(10));
     }
 }
