@@ -3,15 +3,15 @@ package dados;
 import java.util.Arrays;
 
 public class Vetor {
-    private String[] elementos;
+    private Object[] elementos;
     private int tamanho;
 
     public Vetor(int capacidade){
-        this.elementos = new String[capacidade];
+        this.elementos = new Object[capacidade];
         this.tamanho = 0;
     }
 
-    public boolean adiciona(String elemento){
+    public boolean adiciona(Object elemento){
         this.aumentaCapacidade();
 
         if(this.tamanho < this.elementos.length){
@@ -24,7 +24,7 @@ public class Vetor {
 
     private void aumentaCapacidade(){
         if(this.tamanho == this.elementos.length){
-            String[] elementosNovos = new String[this.elementos.length*2];
+            Object[] elementosNovos = new String[this.elementos.length*2];
 
             // substituir por System.arraycopy
             for(int i =0;i<this.elementos.length; i++){
@@ -35,7 +35,7 @@ public class Vetor {
         }
     }
 
-    public boolean adiciona(int posicao, String elemento){
+    public boolean adiciona(int posicao, Object elemento){
         if(!(posicao<this.tamanho && posicao >= 0))
             throw new IllegalArgumentException("Posição inválida");
 
@@ -49,13 +49,13 @@ public class Vetor {
         return true;
     }
 
-    public String busca(int posicao){
+    public Object busca(int posicao){
         if(!(posicao<this.tamanho && posicao >= 0))
             throw  new IllegalArgumentException("Posição inválida");
         return this.elementos[posicao];
     }
 
-    public int busca(String elemento){
+    public int busca(Object elemento){
         for(int i=0; i<this.tamanho; i++){
             if(this.elementos[i].equals(elemento)){
                 return i;
@@ -64,7 +64,7 @@ public class Vetor {
         return -1;
     }
 
-    public void remove(String elemento){
+    public void remove(Object elemento){
         int posicao = busca(elemento);
         remove(posicao);
     }
