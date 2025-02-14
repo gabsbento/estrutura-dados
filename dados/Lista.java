@@ -27,6 +27,10 @@ public class Lista<T> {
         return false;
     }
 
+    public boolean contem(T elemento){
+        return busca(elemento) > -1;
+    }
+
     private void aumentaCapacidade(){
         if(this.tamanho == this.elementos.length){
             T[] elementosNovos = (T[]) new Object[this.elementos.length*2];
