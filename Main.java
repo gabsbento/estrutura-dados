@@ -12,5 +12,6 @@ public class Main {
         lista.adiciona("C");
         System.out.println(lista.contem("A"));
         System.out.println(lista.ultimoIndice("A"));
+        System.out.println(lista.obtem(2));
     }
 }

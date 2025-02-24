@@ -74,6 +74,10 @@ public class Lista<T> {
         return this.elementos[posicao];
     }
 
+    public T obtem(int posicao){
+        return this.busca(posicao);
+    }
+
     public int busca(T elemento){
         for(int i=0; i<this.tamanho; i++){
             if(this.elementos[i].equals(elemento)){
