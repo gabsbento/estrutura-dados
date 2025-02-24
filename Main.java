@@ -10,8 +10,11 @@ public class Main {
         lista.adiciona("B");
         lista.adiciona("A");
         lista.adiciona("C");
-        System.out.println(lista.contem("A"));
-        System.out.println(lista.ultimoIndice("A"));
-        System.out.println(lista.obtem(2));
+        System.out.println("Contem: "+lista.contem("A"));
+        System.out.println("Ultimo indice: "+lista.ultimoIndice("A"));
+        System.out.println("Obtem: "+ lista.obtem(2));
+        System.out.println("Lista: "+lista);
+        lista.limpar();
+        System.out.println("Lista limpa: "+lista);
     }
 }
